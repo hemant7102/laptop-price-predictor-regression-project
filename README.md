@@ -1,115 +1,101 @@
-💻 Laptop Price Predictor
+# 💻 Laptop Price Predictor
 
 A Machine Learning regression project that predicts laptop prices based on laptop specifications.
 
 The project includes a Streamlit web application and is containerized using Docker. The Docker image is published on Docker Hub so that the application can be pulled and run easily on any machine with Docker installed.
 
-🚀 Project Links
+---
 
-GitHub Repository
+## 🚀 Project Links
+
+### GitHub Repository
 
 https://github.com/hemant7102/laptop-price-predictor-regression-project
 
-Docker Hub Repository
+### Docker Hub Repository
 
 https://hub.docker.com/r/hemant7102/laptop
 
-Docker Image
+### Docker Image
 
+```text
 hemant7102/laptop:latest
+```
 
-📌 Project Overview
+---
+
+## 📌 Project Overview
 
 Laptop prices depend on several hardware and software specifications such as:
 
-Brand
-
-Laptop type
-
-RAM
-
-CPU
-
-GPU
-
-Operating System
-
-Storage
-
-Screen size
-
-Weight
-
-Display resolution
-
-Other hardware specifications
+- Brand
+- Laptop type
+- RAM
+- CPU
+- GPU
+- Operating System
+- Storage
+- Screen size
+- Weight
+- Display resolution
+- Other hardware specifications
 
 This project uses Machine Learning regression techniques to learn the relationship between laptop specifications and their prices.
 
 The trained model is integrated into a Streamlit web application where users can enter laptop specifications and receive an estimated laptop price.
 
-🎯 Objectives
+---
 
-Perform data cleaning and preprocessing
+## 🎯 Objectives
 
-Perform exploratory data analysis
+- Perform data cleaning and preprocessing
+- Perform exploratory data analysis
+- Perform feature engineering
+- Train a regression model
+- Evaluate model performance
+- Build an interactive Streamlit application
+- Containerize the application using Docker
+- Publish the Docker image on Docker Hub
+- Manage the project using Git and GitHub
 
-Perform feature engineering
+---
 
-Train a regression model
+## 🛠️ Tech Stack
 
-Evaluate model performance
+### Programming
 
-Build an interactive Streamlit application
+- Python
 
-Containerize the application using Docker
+### Data Analysis
 
-Publish the Docker image on Docker Hub
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
 
-Manage the project using Git and GitHub
+### Machine Learning
 
-🛠️ Tech Stack
+- Scikit-learn
+- Regression
+- Feature Engineering
+- Model Evaluation
 
-Programming
+### Web Application
 
-Python
+- Streamlit
 
-Data Analysis
+### MLOps / Deployment
 
-Pandas
+- Docker
+- Docker Hub
+- Git
+- GitHub
 
-NumPy
+---
 
-Matplotlib
+## 📂 Project Structure
 
-Seaborn
-
-Machine Learning
-
-Scikit-learn
-
-Regression
-
-Feature Engineering
-
-Model Evaluation
-
-Web Application
-
-Streamlit
-
-MLOps / Deployment
-
-Docker
-
-Docker Hub
-
-Git
-
-GitHub
-
-📂 Project Structure
-
+```text
 laptop-price-predictor-regression-project/
 │
 ├── app.py
@@ -123,9 +109,13 @@ laptop-price-predictor-regression-project/
 ├── setup.sh
 ├── README.md
 └── .gitignore
+```
 
-🔄 Machine Learning Workflow
+---
 
+## 🔄 Machine Learning Workflow
+
+```text
 Raw Dataset
      │
      ▼
@@ -160,84 +150,125 @@ Docker Container
      │
      ▼
 Docker Hub
+```
 
-🧠 Machine Learning Approach
+---
+
+## 🧠 Machine Learning Approach
 
 The project uses a regression approach because laptop price is a continuous numerical target.
 
 The trained preprocessing and model pipeline is stored in:
 
+```text
 pipe.pkl
+```
 
 The project also contains:
 
+```text
 df.pkl
+```
 
 which is used by the application for the required data information.
 
-🖥️ Run the Application Locally
+---
 
-1. Clone the repository
+# 🖥️ Run the Application Locally
 
+## 1. Clone the repository
+
+```bash
 git clone https://github.com/hemant7102/laptop-price-predictor-regression-project.git
+```
 
-2. Navigate to the project
+## 2. Navigate to the project
 
+```bash
 cd laptop-price-predictor-regression-project
+```
 
-3. Create a virtual environment
+## 3. Create a virtual environment
 
+```bash
 python -m venv venv
+```
 
-4. Activate the environment
+## 4. Activate the environment
 
-Windows
+### Windows
 
+```powershell
 venv\Scripts\activate
+```
 
-Linux / macOS
+### Linux / macOS
 
+```bash
 source venv/bin/activate
+```
 
-5. Install dependencies
+## 5. Install dependencies
 
+```bash
 pip install -r requirements.txt
+```
 
-6. Run Streamlit
+## 6. Run Streamlit
 
+```bash
 streamlit run app.py
+```
 
 Open:
 
+```text
 http://localhost:8501
+```
 
-🐳 Run Using Docker
+---
+
+# 🐳 Run Using Docker
 
 The application is containerized using Docker.
 
-Pull the Docker image
+## Pull the Docker image
 
+```bash
 docker pull hemant7102/laptop:latest
+```
 
-Run the Docker container
+## Run the Docker container
 
+```bash
 docker run -p 8501:8501 hemant7102/laptop:latest
+```
 
 Open the application:
 
+```text
 http://localhost:8501
+```
 
-🏗️ Build the Docker Image Locally
+---
+
+# 🏗️ Build the Docker Image Locally
 
 To build the Docker image yourself:
 
+```bash
 docker build -t hemant7102/laptop .
+```
 
 Run the image:
 
+```bash
 docker run -p 8501:8501 hemant7102/laptop
+```
 
-📦 Docker Hub
+---
+
+# 📦 Docker Hub
 
 Docker Hub repository:
 
@@ -245,40 +276,48 @@ https://hub.docker.com/r/hemant7102/laptop
 
 Docker image:
 
+```text
 hemant7102/laptop:latest
+```
 
-Pull the image
+### Pull the image
 
+```bash
 docker pull hemant7102/laptop:latest
+```
 
-Run the image
+### Run the image
 
+```bash
 docker run -p 8501:8501 hemant7102/laptop:latest
+```
 
-🔧 Docker Configuration
+---
+
+# 🔧 Docker Configuration
 
 The Dockerfile creates a reproducible environment containing:
 
-Python
-
-Application source code
-
-Required dependencies
-
-Streamlit
-
-Machine Learning model
-
-Configuration required to run the application
+- Python
+- Application source code
+- Required dependencies
+- Streamlit
+- Machine Learning model
+- Configuration required to run the application
 
 The Streamlit application runs on port:
 
+```text
 8501
+```
 
-📊 Application Workflow
+---
+
+# 📊 Application Workflow
 
 The Streamlit application allows users to provide laptop specifications.
 
+```text
 Laptop Specifications
         │
         ▼
@@ -292,53 +331,53 @@ Machine Learning Model
         │
         ▼
 Predicted Laptop Price
+```
 
-🧪 Reproducibility
+---
 
-The project uses requirements.txt to define the required Python packages.
+# 🧪 Reproducibility
+
+The project uses `requirements.txt` to define the required Python packages.
 
 Docker provides another way to reproduce the complete application environment.
 
 Anyone with Docker installed can run:
 
+```bash
 docker pull hemant7102/laptop:latest
 docker run -p 8501:8501 hemant7102/laptop:latest
+```
 
 Then open:
 
+```text
 http://localhost:8501
+```
 
-🚀 Future Improvements
+---
+
+# 🚀 Future Improvements
 
 Possible improvements include:
 
-Hyperparameter tuning
+- Hyperparameter tuning
+- Cross-validation
+- Additional feature engineering
+- Model comparison
+- SHAP-based model explainability
+- MLflow experiment tracking
+- Model versioning
+- CI/CD automation
+- Automated Docker image builds
+- Cloud deployment
+- Model monitoring
+- Data drift monitoring
 
-Cross-validation
+---
 
-Additional feature engineering
+# 👨‍💻 Author
 
-Model comparison
-
-SHAP-based model explainability
-
-MLflow experiment tracking
-
-Model versioning
-
-CI/CD automation
-
-Automated Docker image builds
-
-Cloud deployment
-
-Model monitoring
-
-Data drift monitoring
-
-👨‍💻 Author
-
-Hemant Narute
+## Hemant Narute
 
 Aspiring Data Scientist | Data Analyst | ML & MLOps Enthusiast
 
@@ -346,6 +385,8 @@ GitHub:
 
 https://github.com/hemant7102
 
-⭐ Project
+---
+
+## ⭐ Project
 
 If you find this project useful, feel free to explore the repository and experiment with the application.
